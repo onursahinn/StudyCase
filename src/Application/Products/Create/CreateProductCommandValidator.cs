@@ -8,8 +8,9 @@ public class CreateProductCommandValidator : AbstractValidator<CreateProductComm
 {
     public CreateProductCommandValidator()
     {
-        RuleFor(c => c.Title).NotEmpty().WithMessage(ProductErrors.TitleNotEmpty().Description);
-        RuleFor(c => c.Title).MinimumLength(1).MaximumLength(200).WithMessage(ProductErrors.TitleLength().Description);
-        RuleFor(c => c.CategoryId).NotEmpty().WithMessage(ProductErrors.CategoryNotEmpty().Description);
+        RuleFor(c => c.Title).NotEmpty().WithMessage(ProductErrors.TitleNotEmpty().Description).WithErrorCode(ProductErrors.TitleNotEmpty().Code);
+        RuleFor(c => c.Title).MinimumLength(1).WithMessage(ProductErrors.TitleLength().Description).WithErrorCode(ProductErrors.TitleLength().Code)
+            .MaximumLength(200).WithMessage(ProductErrors.TitleLength().Description).WithErrorCode(ProductErrors.TitleLength().Code);
+        RuleFor(c => c.CategoryId).NotEmpty().WithMessage(ProductErrors.CategoryNotEmpty().Description).WithErrorCode(ProductErrors.CategoryNotEmpty().Code);
     }
 }

@@ -1,5 +1,3 @@
-using Domain.Category;
-
 namespace Application.Products.GetById;
 
 public sealed class ProductResponse

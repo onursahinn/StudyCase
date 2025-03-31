@@ -18,12 +18,4 @@
 	<InternalsVisibleTo Include="Application.UnitTests" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Categories\Create\" />
-    <Folder Include="Categories\Delete\" />
-    <Folder Include="Categories\GetById\" />
-    <Folder Include="Categories\Get\" />
-    <Folder Include="Categories\Update\" />
-  </ItemGroup>
-
 </Project>
