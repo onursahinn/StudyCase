@@ -1,7 +1,6 @@
 ﻿using Application.Abstractions.Data;
 using Domain.Category;
 using Domain.Product;
-using Domain.Todos;
 using Domain.Users;
 using MediatR;
 using Microsoft.EntityFrameworkCore;

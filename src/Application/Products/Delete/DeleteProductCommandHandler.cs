@@ -1,7 +1,6 @@
 using Application.Abstractions.Data;
 using Application.Abstractions.Messaging;
 using Domain.Product;
-using Domain.Todos;
 using Microsoft.EntityFrameworkCore;
 using SharedKernel;
 
@@ -16,7 +15,7 @@ public sealed class DeleteProductCommandHandler(IApplicationDbContext context) :
 
         if (product is null)
         {
-            return Result.Failure(TodoItemErrors.NotFound(command.ProductId));
+            return Result.Failure(ProductErrors.NotFound(command.ProductId));
         }
 
         product.IsDeleted = true;

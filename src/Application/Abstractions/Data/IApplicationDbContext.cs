@@ -1,6 +1,5 @@
 ﻿using Domain.Category;
 using Domain.Product;
-using Domain.Todos;
 using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 
