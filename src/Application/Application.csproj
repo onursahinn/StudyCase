@@ -5,6 +5,7 @@
     <PackageReference Include="MediatR" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
     <PackageReference Include="Serilog" />
   </ItemGroup>
 
@@ -23,11 +24,6 @@
     <Folder Include="Categories\GetById\" />
     <Folder Include="Categories\Get\" />
     <Folder Include="Categories\Update\" />
-    <Folder Include="Products\Create\" />
-    <Folder Include="Products\Delete\" />
-    <Folder Include="Products\GetById\" />
-    <Folder Include="Products\Get\" />
-    <Folder Include="Products\Update\" />
   </ItemGroup>
 
 </Project>

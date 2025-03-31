@@ -1,3 +1,4 @@
+using NpgsqlTypes;
 using SharedKernel;
 
 namespace Domain.Product;
@@ -9,4 +10,7 @@ public class Product : Entity
     public string Title { get; set; }
     public string Description { get; set; }
     public int StockQuantity { get; set; }
+    public string SearchText { get; set; } 
+    public NpgsqlTsVector SearchVector { get; set; }
+
 }

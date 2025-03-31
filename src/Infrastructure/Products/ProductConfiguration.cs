@@ -10,7 +10,14 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
     public void Configure(EntityTypeBuilder<Product> builder)
     {
         builder.HasKey(t => t.Id);
-        builder.HasOne<Category>().WithMany().HasForeignKey(t => t.CategoryId);
         builder.Property(t => t.Title).HasMaxLength(200);
+        
+        // Configure the full-text search vector
+        builder.HasGeneratedTsVectorColumn(
+                p => p.SearchVector,
+                "turkish",  // Text search config
+                p => p.SearchText)  // Included property
+            .HasIndex(p => p.SearchVector)
+            .HasMethod("GIN");
     }
 }
